@@ -21,7 +21,7 @@ stages:
       displayName: Build an image
       inputs:
         command: build
-        repository: 'l4d2-server'
+        repository: 'altairsossai/l4d2-server'
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: 'latest'
     - task: Docker@2
@@ -29,5 +29,5 @@ stages:
       inputs:
         command: 'push'
         containerRegistry: 'Docker Hub'
-        repository: 'l4d2-server'
+        repository: 'altairsossai/l4d2-server'
         tags: 'latest'
